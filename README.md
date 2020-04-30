@@ -1,6 +1,9 @@
 # FireSensorApplication
-Small desktop client that mimic a fire sensor
-This sends web requests to the API `https://fire-alarm-api-ds.herokuapp.com`
+This is a small desktop client that mimic a fire sensor. 
+
+This sends sensor information(CO2 and Smoke levels) to the API hosted at `https://fire-alarm-api-ds.herokuapp.com`
+
+You can change the specific levels of CO2 and Smoke to test the API.
 
 ## Prerequisits
 1. Node
