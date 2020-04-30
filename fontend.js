@@ -19,6 +19,9 @@ function onSubmit(e) {
             if (res.isAvailable === true) {
                 if (res.info.room_no !== roomNo || res.info.floor_no !== floorNo) {
                     alert("Room No, or the Floor No. You entered was wrong, they have been corrected.");
+                    // set the correct room no and floor no
+                    roomNo = res.info.room_no;
+                    floorNo = res.info.floor_no;
                 }
                 smoke.value = res.info.smoke_level;
                 co2.value = res.info.co2_level;
@@ -65,10 +68,10 @@ function updateLevels() {
                 updateStatus(res.co2_level, res.smoke_level);
             })
             .catch(err => {
-                console.log("Body: ", bodyO);
                 console.log("Error: " + err);
+                alert("Error from the server...\nExit?");
                 clearTimeout(timer);
-                return false;
+                window.close();
             })
 
     }, 5000);
