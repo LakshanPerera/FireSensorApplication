@@ -5,7 +5,7 @@ This sends sensor information(CO2 and Smoke levels) to the API hosted at `https:
 
 You can change the specific levels of CO2 and Smoke to test the API.
 
-## Prerequisits
+## Prerequisites
 1. Node
 2. NPM(comes with Node)
 

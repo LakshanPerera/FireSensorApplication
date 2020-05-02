@@ -36,13 +36,14 @@ function onSubmit(e) {
                 alert("Authenticated!");
                 updateLevels();
                 return true;
-            }else{
+            } else {
                 alert(`Authentication of the Sensor ID: ${id} failed\nNo Sensor Registered with that ID(${id})`);
                 return false;
             }
         })
         .catch(err => {
             alert("Error: " + err);
+            close();
             return false;
         });
 }
